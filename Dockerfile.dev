@@ -1,0 +1,9 @@
+FROM node:10
+COPY . /app
+WORKDIR /app
+
+RUN set -x \
+	&& chmod +x ./_build/entrypoint.sh
+
+ENTRYPOINT ["./_build/entrypoint.sh"]
+

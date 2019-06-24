@@ -1,0 +1,11 @@
+version: '3'
+services:
+  time-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: time-tracker
+    ports:
+     - "8080:8080"
+    volumes: 
+     - ./src:/app/src
